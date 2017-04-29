@@ -30,7 +30,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: loranger.debian-sphinxsearch, sphinxsearch.start: "yes", sphinxsearch.sql.host: "localhost", sphinxsearch.sql.user: "test", sphinxsearch.sql.pass: "", sphinxsearch.sql.db: "test", sphinxsearch.sql.port: "3306" }
+         - { role: cowops.debian-sphinxsearch, sphinxsearch.start: "yes", sphinxsearch.sql.host: "localhost", sphinxsearch.sql.user: "test", sphinxsearch.sql.pass: "", sphinxsearch.sql.db: "test", sphinxsearch.sql.port: "3306" }
 
 Tasks
 -----
