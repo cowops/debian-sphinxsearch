@@ -1,9 +1,13 @@
 ---
 - name: install sphinx packages
-  apt: pkg={{ item }} state=latest update_cache=yes
-  with_items:
-    - sphinxsearch
-    
+  apt:
+    name: {{ packages }}
+    state: latest
+    update_cache: yes
+  vars:
+    packages:
+      - sphinxsearch
+
 - name: enable auto-start
   lineinfile: dest=/etc/default/sphinxsearch regexp="START=(no|yes)" line="START={{ sphinxsearch.start }}"
   notify: restart sphinxsearch
